@@ -4,3 +4,10 @@ test-results/
 playwright-report/
 *.local
 *.tsbuildinfo
+
+# Local planning and agent guidance
+AGENT.md
+spec.md
+plan.md
+task.md
+checklist.md

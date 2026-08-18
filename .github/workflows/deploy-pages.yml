@@ -25,7 +25,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run schema:check
-      - run: npm run validate:content -- --mode=production
+      - run: npm run validate:content -- --mode=development
       - run: npm run lint
       - run: npm run typecheck
       - run: npm run test -- --run

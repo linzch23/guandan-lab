@@ -62,7 +62,11 @@ content/
 
 ## GitHub Pages
 
-仓库内工作流会在主分支依次运行 Schema 同步、正式内容校验、lint、类型检查、测试、构建与端到端测试，全部通过后上传 Pages 产物。
+仓库内工作流会在主分支依次运行 Schema 同步、内容校验、lint、类型检查、测试、构建与端到端测试，全部通过后上传 Pages 产物。
+
+当前工作流发布的是技术预览版，因此内容校验使用 development 模式。课程和题目仍然是 `draft`，页面会显示预览提示，不应将其中的规则与策略作为赛事裁定依据。
+
+待全部课程和题目完成审核后，将 `.github/workflows/deploy-pages.yml` 中的校验切换为 `--mode=production`，并先在本地运行 `npm run validate:content -- --mode=production`，通过后再提交发布。
 
 首次发布由仓库所有者完成：
 
