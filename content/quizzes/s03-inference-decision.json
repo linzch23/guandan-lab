@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "s03-inference-decision",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "对手连续两次不接对子，你下一次领出优先试什么?",
+  "skillIds": [
+    "card-memory"
+  ],
+  "lessonIds": [
+    "s03-control-and-pass"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "试探要控制成本。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "7",
+    "yourHand": [
+      "S-4",
+      "H-4",
+      "D-8",
+      "C-9"
+    ],
+    "notes": [
+      "按当前牌权和剩余张数判断",
+      "优先考虑下一手"
+    ]
+  },
+  "options": [
+    {
+      "id": "pair",
+      "label": "用低成本小对子试探",
+      "cards": [
+        "S-4",
+        "H-4"
+      ],
+      "feedback": "验证缺对子假设，同时不耗控制牌。"
+    },
+    {
+      "id": "bomb",
+      "label": "直接用炸弹抢牌",
+      "cards": [
+        "D-8",
+        "C-8",
+        "H-8",
+        "S-8"
+      ],
+      "feedback": "信息不足时消耗强牌风险过高。"
+    }
+  ],
+  "recommendedOptionId": "pair",
+  "conditions": [
+    "手中有不影响主计划的小对子",
+    "对手没有一手出完威胁"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "b02-pair-compare",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "同为对子时，哪组更大?",
+  "skillIds": [
+    "ranking"
+  ],
+  "lessonIds": [
+    "b02-deck-level-card"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "同牌型同张数按点数比较。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "comparison",
+  "levelRank": "7",
+  "groups": [
+    {
+      "id": "a",
+      "label": "10 对",
+      "cards": [
+        "S-10",
+        "H-10"
+      ]
+    },
+    {
+      "id": "b",
+      "label": "9 对",
+      "cards": [
+        "D-9",
+        "C-9"
+      ]
+    }
+  ],
+  "correctGroupId": "a"
+}

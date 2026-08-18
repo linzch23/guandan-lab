@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "s02-return-decision",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "你赢下小单张后可出孤张或对子，哪项更稳?",
+  "skillIds": [
+    "play-order"
+  ],
+  "lessonIds": [
+    "s02-play-order"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "出牌要比较下一手和牌权交接。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "7",
+    "yourHand": [
+      "S-3",
+      "H-3",
+      "D-9",
+      "C-10"
+    ],
+    "notes": [
+      "按当前牌权和剩余张数判断",
+      "优先考虑下一手"
+    ]
+  },
+  "options": [
+    {
+      "id": "pair",
+      "label": "先出对子",
+      "cards": [
+        "S-3",
+        "H-3"
+      ],
+      "feedback": "减少一手并保留较清晰的尾牌。"
+    },
+    {
+      "id": "single",
+      "label": "先出孤张",
+      "cards": [
+        "D-9"
+      ],
+      "feedback": "若孤张能诱出对手关键牌才更合理。"
+    }
+  ],
+  "recommendedOptionId": "pair",
+  "conditions": [
+    "对子不会让对家失去接牌机会",
+    "孤张没有明确的试探目的"
+  ]
+}

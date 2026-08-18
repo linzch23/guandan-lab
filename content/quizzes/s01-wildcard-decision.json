@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "s01-wildcard-decision",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "红桃 7 可补顺子或保留控牌，当前你已有完整顺子，怎么选?",
+  "skillIds": [
+    "hand-organization"
+  ],
+  "lessonIds": [
+    "s01-hand-organization"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "逢人配的机会成本要纳入组牌。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "7",
+    "yourHand": [
+      "H-7",
+      "S-8",
+      "H-9",
+      "D-10",
+      "C-J",
+      "S-K"
+    ],
+    "notes": [
+      "按当前牌权和剩余张数判断",
+      "优先考虑下一手"
+    ]
+  },
+  "options": [
+    {
+      "id": "keep",
+      "label": "保留逢人配",
+      "feedback": "已有完整顺子，保留灵活性和后续夺权价值。"
+    },
+    {
+      "id": "fill",
+      "label": "拆牌补另一组顺子",
+      "cards": [
+        "H-7",
+        "S-8",
+        "H-9",
+        "D-10",
+        "C-J"
+      ],
+      "feedback": "若没有明确手数收益，拆牌不划算。"
+    }
+  ],
+  "recommendedOptionId": "keep",
+  "conditions": [
+    "手中至少有一组完整长牌",
+    "后续存在争夺牌权的可能"
+  ]
+}

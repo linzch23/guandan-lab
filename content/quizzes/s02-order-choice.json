@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "s02-order-choice",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "安排出牌顺序时，优先考虑什么?",
+  "skillIds": [
+    "play-order"
+  ],
+  "lessonIds": [
+    "s02-play-order"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "顺序要服务连续两手的计划。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "next",
+      "label": "当前牌与下一手的衔接"
+    },
+    {
+      "id": "show",
+      "label": "先展示最大牌"
+    },
+    {
+      "id": "random",
+      "label": "按手里顺序出"
+    }
+  ],
+  "correctOptionId": "next"
+}

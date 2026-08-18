@@ -3,14 +3,14 @@
     "id": "beginner",
     "title": "零基础入门",
     "description": "从认识牌桌到看懂一局，按顺序掌握国家竞技规则的核心概念。",
-    "lessonIds": ["b01-introduction", "b02-deck-level-card", "b03-basic-combinations", "b04-bombs-special", "b05-ranking", "b06-turn-flow", "b07-tribute", "b08-round-and-leveling"],
-    "assessmentQuestionIds": ["b01-goal", "b02-level-card", "b02-wildcard-compare", "b03-type", "b03-straight-compare", "b04-bomb-rule", "b05-ranking-one", "b06-follow", "b07-tribute", "b08-leveling"]
+    "lessonIds": ["b01-introduction", "b02-deck-level-card", "b03-basic-combinations", "b04-bombs-special"],
+    "assessmentQuestionIds": ["b01-quick-goal", "b01-quick-level", "b02-basic-type", "b02-pair-compare", "b02-straight-compare", "b03-turn-choice", "b03-tribute-decision", "b03-round-compare", "b04-bomb-choice", "b04-leveling"]
   },
   {
     "id": "skills",
     "title": "常用技巧提升",
     "description": "把规则变成决策：理牌、牌权、炸弹、记牌和对家配合。",
     "lessonIds": ["s01-hand-organization", "s02-play-order", "s03-control-and-pass", "s04-bombs-and-wildcards", "s05-card-memory", "s06-partner-coordination"],
-    "assessmentQuestionIds": ["s01-principle", "s01-decision-two", "s02-principle", "s02-decision-one", "s03-principle", "s03-decision-two", "s04-principle", "s04-decision-one", "s05-principle", "s06-decision-two"]
+    "assessmentQuestionIds": ["s01-scan-choice", "s01-structure-compare", "s01-role-decision", "s02-order-choice", "s02-control-compare", "s02-return-decision", "s03-memory-choice", "s03-inference-decision", "s04-partner-choice", "s05-risk-decision"]
   }
 ]

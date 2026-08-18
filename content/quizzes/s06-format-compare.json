@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "s06-format-compare",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "哪种残局目标更明确?",
+  "skillIds": [
+    "endgames"
+  ],
+  "lessonIds": [
+    "s06-partner-coordination"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "结果相关性比单轮胜负更重要。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "comparison",
+  "levelRank": "7",
+  "groups": [
+    {
+      "id": "a",
+      "label": "赢一轮但对手接着领出",
+      "cards": [
+        "S-A"
+      ]
+    },
+    {
+      "id": "b",
+      "label": "赢一轮并让对家一手出完",
+      "cards": [
+        "H-8",
+        "D-8"
+      ]
+    }
+  ],
+  "correctGroupId": "b"
+}

@@ -45,6 +45,12 @@ for (const lesson of content.lessons) {
   requireRef("source", `lesson ${lesson.id}`, lesson.sourceIds, sourceIds);
   requireRef("quiz", `lesson ${lesson.id}`, lesson.checkpointQuestionIds, quizIds);
   if (!lesson.cards.length) errors.push(`lesson ${lesson.id}: at least one cards block is required`);
+  const bodyLength = lesson.body.replace(/```cards[\s\S]*?```/g, "").replace(/[`*_#>-]/g, "").trim().length;
+  const minimum = lesson.trackId === "beginner" ? 800 : 1200;
+  const maximum = lesson.trackId === "beginner" ? 1200 : 1800;
+  if (bodyLength < minimum || bodyLength > maximum) errors.push(`lesson ${lesson.id}: body length must be ${minimum}-${maximum}, found ${bodyLength}`);
+  const requiredQuizCount = lesson.trackId === "beginner" ? 3 : 4;
+  if (lesson.checkpointQuestionIds.length < requiredQuizCount) errors.push(`lesson ${lesson.id}: at least ${requiredQuizCount} checkpoint quizzes required`);
 }
 for (const quiz of content.quizzes) {
   requireRef("skill", `quiz ${quiz.id}`, quiz.skillIds, skillIds);
@@ -56,11 +62,22 @@ for (const quiz of content.quizzes) {
 }
 
 if (production) {
-  if (content.lessons.length !== 14) errors.push(`production requires 14 lessons, found ${content.lessons.length}`);
+  if (content.lessons.length !== 10) errors.push(`production requires 10 lessons, found ${content.lessons.length}`);
   if (content.quizzes.length !== 36) errors.push(`production requires 36 quizzes, found ${content.quizzes.length}`);
+  const beginner = content.lessons.filter((lesson) => lesson.trackId === "beginner").length;
+  const skills = content.lessons.filter((lesson) => lesson.trackId === "skills").length;
+  if (beginner !== 4 || skills !== 6) errors.push(`lesson distribution must be 4/6, found ${beginner}/${skills}`);
   const counts = { choice: 0, comparison: 0, decision: 0 };
   for (const quiz of content.quizzes) counts[quiz.type] += 1;
   if (counts.choice !== 14 || counts.comparison !== 10 || counts.decision !== 12) errors.push(`quiz distribution must be 14/10/12, found ${counts.choice}/${counts.comparison}/${counts.decision}`);
+  const beginnerQuizzes = content.quizzes.filter((quiz) => quiz.trackId === "beginner").length;
+  const skillQuizzes = content.quizzes.filter((quiz) => quiz.trackId === "skills").length;
+  if (beginnerQuizzes !== 12 || skillQuizzes !== 24) errors.push(`quiz track distribution must be 12/24, found ${beginnerQuizzes}/${skillQuizzes}`);
+  for (const track of content.tracks) {
+    if (track.id === "beginner" && track.lessonIds.length !== 4) errors.push("beginner track must contain 4 lessons");
+    if (track.id === "skills" && track.lessonIds.length !== 6) errors.push("skills track must contain 6 lessons");
+    if (track.assessmentQuestionIds.length !== 10) errors.push(`track ${track.id}: assessment must contain 10 quizzes`);
+  }
   for (const item of [...content.lessons, ...content.quizzes]) {
     if (item.review.status !== "approved" || !item.review.reviewer || !item.review.reviewedAt) errors.push(`${item.id}: production content is not approved`);
   }

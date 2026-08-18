@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "b04-bomb-choice",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "四张同点数牌通常属于什么牌型？",
+  "skillIds": ["ranking"],
+  "lessonIds": ["b04-bombs-special"],
+  "sourceIds": ["national-rules"],
+  "explanation": "四张及以上同点数牌构成炸弹，可以按特殊规则压过普通牌型。",
+  "review": { "status": "draft" },
+  "type": "choice",
+  "options": [
+    { "id": "four", "label": "炸弹" },
+    { "id": "three", "label": "三张" },
+    { "id": "straight", "label": "顺子" }
+  ],
+  "correctOptionId": "four"
+}

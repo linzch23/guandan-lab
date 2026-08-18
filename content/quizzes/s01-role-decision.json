@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "s01-role-decision",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "你有两组长牌、没有炸弹且尾牌较散，适合什么角色?",
+  "skillIds": [
+    "hand-organization"
+  ],
+  "lessonIds": [
+    "s01-hand-organization"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "角色应与手牌结构和控制资源匹配。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "7",
+    "yourHand": [
+      "S-3",
+      "H-3",
+      "D-4",
+      "C-4",
+      "S-7",
+      "H-8",
+      "D-9",
+      "C-10",
+      "S-J"
+    ],
+    "notes": [
+      "按当前牌权和剩余张数判断",
+      "优先考虑下一手"
+    ]
+  },
+  "options": [
+    {
+      "id": "fast",
+      "label": "先走牌减少手数",
+      "feedback": "长牌结构完整，先降低手数并观察牌权。"
+    },
+    {
+      "id": "control",
+      "label": "强行争夺每轮牌权",
+      "feedback": "缺少控制牌，连续抢牌风险较高。"
+    }
+  ],
+  "recommendedOptionId": "fast",
+  "conditions": [
+    "长牌能合法连续出",
+    "对手未接近一手出完"
+  ]
+}

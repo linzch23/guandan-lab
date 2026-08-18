@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "s03-pass-compare",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "哪项过牌信息更可靠?",
+  "skillIds": [
+    "card-memory"
+  ],
+  "lessonIds": [
+    "s03-control-and-pass"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "重复行动比一次行动更能提高推断权重。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "comparison",
+  "levelRank": "7",
+  "groups": [
+    {
+      "id": "a",
+      "label": "一次过单张",
+      "cards": [
+        "S-4"
+      ]
+    },
+    {
+      "id": "b",
+      "label": "同一玩家连续两次过对子",
+      "cards": [
+        "H-6",
+        "D-6"
+      ]
+    }
+  ],
+  "correctGroupId": "b"
+}

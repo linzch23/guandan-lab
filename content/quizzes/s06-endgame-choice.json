@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "s06-endgame-choice",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "残局分析的第一步是什么?",
+  "skillIds": [
+    "endgames"
+  ],
+  "lessonIds": [
+    "s06-partner-coordination"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "残局先数手和牌权，再决定出牌。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "count",
+      "label": "估计四方剩余手数"
+    },
+    {
+      "id": "rank",
+      "label": "只找最大牌"
+    },
+    {
+      "id": "review",
+      "label": "先看最终结果"
+    }
+  ],
+  "correctOptionId": "count"
+}

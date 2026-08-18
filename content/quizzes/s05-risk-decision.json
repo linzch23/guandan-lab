@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "s05-risk-decision",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "对手还剩两手、对家还剩一手，你有四张炸弹，怎么评估?",
+  "skillIds": [
+    "bombs-wildcards"
+  ],
+  "lessonIds": [
+    "s05-card-memory"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "高风险动作需要收益和代价同时成立。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "7",
+    "yourHand": [
+      "S-8",
+      "H-8",
+      "D-8",
+      "C-8",
+      "S-4"
+    ],
+    "notes": [
+      "按当前牌权和剩余张数判断",
+      "优先考虑下一手"
+    ]
+  },
+  "options": [
+    {
+      "id": "wait",
+      "label": "先保留并寻找交接",
+      "feedback": "对家更接近出完，先找安全牌权交接。"
+    },
+    {
+      "id": "bomb",
+      "label": "立即炸掉当前小牌",
+      "cards": [
+        "S-8",
+        "H-8",
+        "D-8",
+        "C-8"
+      ],
+      "feedback": "若不能同时阻止对手，消耗炸弹代价较高。"
+    }
+  ],
+  "recommendedOptionId": "wait",
+  "conditions": [
+    "对家有合法接牌可能",
+    "当前小牌不会让对手直接出完"
+  ]
+}

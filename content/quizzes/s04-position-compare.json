@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "s04-position-compare",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "对家在你之后出牌时，哪种领出更便于配合?",
+  "skillIds": [
+    "partnership"
+  ],
+  "lessonIds": [
+    "s04-bombs-and-wildcards"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "中等牌型更可能给对家留下可接空间。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "comparison",
+  "levelRank": "7",
+  "groups": [
+    {
+      "id": "a",
+      "label": "中等对子",
+      "cards": [
+        "S-8",
+        "H-8"
+      ]
+    },
+    {
+      "id": "b",
+      "label": "极大单张",
+      "cards": [
+        "S-A"
+      ]
+    }
+  ],
+  "correctGroupId": "a"
+}

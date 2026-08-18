@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "b01-quick-goal",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "与你组成同一队的是谁?",
+  "skillIds": [
+    "game-goal"
+  ],
+  "lessonIds": [
+    "b01-introduction"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "掼蛋按相对而坐组成搭档。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "opposite",
+      "label": "正对面玩家"
+    },
+    {
+      "id": "left",
+      "label": "左手边玩家"
+    },
+    {
+      "id": "right",
+      "label": "右手边玩家"
+    }
+  ],
+  "correctOptionId": "opposite"
+}

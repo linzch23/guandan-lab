@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "s01-structure-compare",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "两种组牌方案优先比较哪项?",
+  "skillIds": [
+    "hand-organization"
+  ],
+  "lessonIds": [
+    "s01-hand-organization"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "尾牌可执行性通常比表面手数更重要。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "comparison",
+  "levelRank": "7",
+  "groups": [
+    {
+      "id": "a",
+      "label": "少一手但留下孤张",
+      "cards": [
+        "S-8",
+        "H-8",
+        "D-4"
+      ]
+    },
+    {
+      "id": "b",
+      "label": "多一手但尾牌可衔接",
+      "cards": [
+        "S-7",
+        "H-7",
+        "D-8",
+        "C-8"
+      ]
+    }
+  ],
+  "correctGroupId": "b"
+}

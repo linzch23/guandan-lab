@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "s05-tribute-compare",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "进贡选牌时，哪项更应优先保留?",
+  "skillIds": [
+    "tribute"
+  ],
+  "lessonIds": [
+    "s05-card-memory"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "进贡要避免破坏下局的关键结构。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "comparison",
+  "levelRank": "7",
+  "groups": [
+    {
+      "id": "a",
+      "label": "下局唯一控制牌",
+      "cards": [
+        "S-A"
+      ]
+    },
+    {
+      "id": "b",
+      "label": "难以衔接的孤张",
+      "cards": [
+        "C-10"
+      ]
+    }
+  ],
+  "correctGroupId": "a"
+}

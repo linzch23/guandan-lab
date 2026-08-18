@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "s03-count-decision",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "你只记得对手过过一手单张，是否就断定他没有单张?",
+  "skillIds": [
+    "card-memory"
+  ],
+  "lessonIds": [
+    "s03-control-and-pass"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "把推断分成确定、可能和未知三档。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "7",
+    "yourHand": [
+      "S-5",
+      "H-5",
+      "D-7"
+    ],
+    "notes": [
+      "按当前牌权和剩余张数判断",
+      "优先考虑下一手"
+    ]
+  },
+  "options": [
+    {
+      "id": "unknown",
+      "label": "保持未知并继续观察",
+      "feedback": "过牌可能是不接，也可能是保留大单张。"
+    },
+    {
+      "id": "sure",
+      "label": "按没有单张处理",
+      "feedback": "一次行动不足以形成确定结论。"
+    }
+  ],
+  "recommendedOptionId": "unknown",
+  "conditions": [
+    "目前只有一次过牌证据",
+    "对手剩余张数尚多"
+  ]
+}

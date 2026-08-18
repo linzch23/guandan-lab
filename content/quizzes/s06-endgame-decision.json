@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "s06-endgame-decision",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "残局中对手两手、对家一手，你拿到牌权应先做什么?",
+  "skillIds": [
+    "endgames"
+  ],
+  "lessonIds": [
+    "s06-partner-coordination"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "残局先处理决定性手数。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "7",
+    "yourHand": [
+      "S-5",
+      "H-5",
+      "D-6",
+      "C-6",
+      "S-A"
+    ],
+    "notes": [
+      "按当前牌权和剩余张数判断",
+      "优先考虑下一手"
+    ]
+  },
+  "options": [
+    {
+      "id": "handoff",
+      "label": "寻找对家能接的一手",
+      "cards": [
+        "S-5",
+        "H-5"
+      ],
+      "feedback": "安全交接比单独清自己的牌更关键。"
+    },
+    {
+      "id": "rush",
+      "label": "先出最大单张",
+      "cards": [
+        "S-A"
+      ],
+      "feedback": "可能把牌权交给对手。"
+    }
+  ],
+  "recommendedOptionId": "handoff",
+  "conditions": [
+    "对家存在合法接牌路线",
+    "对手当前不能一手出完"
+  ]
+}

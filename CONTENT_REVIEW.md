@@ -10,10 +10,6 @@ For every item verify: factual accuracy, exact terminology, source relevance, st
 - [ ] b02-deck-level-card
 - [ ] b03-basic-combinations
 - [ ] b04-bombs-special
-- [ ] b05-ranking
-- [ ] b06-turn-flow
-- [ ] b07-tribute
-- [ ] b08-round-and-leveling
 - [ ] s01-hand-organization
 - [ ] s02-play-order
 - [ ] s03-control-and-pass
@@ -23,45 +19,45 @@ For every item verify: factual accuracy, exact terminology, source relevance, st
 
 ## Beginner questions
 
-- [ ] b01-goal
-- [ ] b02-level-card
-- [ ] b02-wildcard-compare
-- [ ] b03-type
-- [ ] b03-pair-compare
-- [ ] b03-straight-compare
-- [ ] b04-bomb-rule
-- [ ] b04-bomb-count-compare
-- [ ] b04-straight-flush-compare
-- [ ] b05-ranking-one
-- [ ] b05-ranking-two
-- [ ] b05-ranking-three
-- [ ] b06-follow
-- [ ] b06-follow-compare
-- [ ] b07-tribute
-- [ ] b07-resist
-- [ ] b08-leveling
-- [ ] b08-round-compare
+- [ ] b01-quick-goal
+- [ ] b01-quick-level
+- [ ] b01-quick-type-compare
+- [ ] b02-basic-type
+- [ ] b02-pair-compare
+- [ ] b02-straight-compare
+- [ ] b03-turn-choice
+- [ ] b03-tribute-decision
+- [ ] b03-round-compare
+- [ ] b04-bomb-choice
+- [ ] b04-leveling
+- [ ] b04-common-errors
 
 ## Skill questions
 
-- [ ] s01-principle
-- [ ] s01-decision-one
-- [ ] s01-decision-two
-- [ ] s02-principle
-- [ ] s02-decision-one
-- [ ] s02-decision-two
-- [ ] s03-principle
-- [ ] s03-decision-one
-- [ ] s03-decision-two
-- [ ] s04-principle
-- [ ] s04-decision-one
-- [ ] s04-decision-two
-- [ ] s05-principle
-- [ ] s05-decision-one
-- [ ] s05-decision-two
-- [ ] s06-principle
-- [ ] s06-decision-one
-- [ ] s06-decision-two
+- [ ] s01-scan-choice
+- [ ] s01-structure-compare
+- [ ] s01-role-decision
+- [ ] s01-wildcard-decision
+- [ ] s02-order-choice
+- [ ] s02-pass-choice
+- [ ] s02-control-compare
+- [ ] s02-return-decision
+- [ ] s03-memory-choice
+- [ ] s03-pass-compare
+- [ ] s03-inference-decision
+- [ ] s03-count-decision
+- [ ] s04-partner-choice
+- [ ] s04-position-compare
+- [ ] s04-send-decision
+- [ ] s04-block-decision
+- [ ] s05-bomb-choice
+- [ ] s05-wildcard-choice
+- [ ] s05-tribute-compare
+- [ ] s05-risk-decision
+- [ ] s06-endgame-choice
+- [ ] s06-format-compare
+- [ ] s06-endgame-decision
+- [ ] s06-review-decision
 
 ## Approval procedure
 

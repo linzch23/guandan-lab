@@ -1,5 +1,5 @@
 import { ArrowLeft, ArrowRight, CheckCircle2, ExternalLink } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { Link, useParams } from "react-router-dom";
 import remarkGfm from "remark-gfm";
@@ -13,6 +13,10 @@ export function LessonPage() {
   const { lessonId = "" } = useParams();
   const lesson = content.lessonById.get(lessonId);
   const { progress, recordAnswer, completeLesson, setLastLocation } = useProgress();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [lessonId]);
   useEffect(() => { if (lesson) setLastLocation("lesson", lesson.id); }, [lesson, setLastLocation]);
   if (!lesson) return <NotFound title="没有找到这节课" />;
   const track = content.trackById.get(lesson.trackId)!;

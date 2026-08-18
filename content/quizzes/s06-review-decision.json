@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "s06-review-decision",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "复盘一次失误时，哪种记录最有用?",
+  "skillIds": [
+    "endgames"
+  ],
+  "lessonIds": [
+    "s06-partner-coordination"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "复盘应产出可验证的下一步。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "7",
+    "yourHand": [
+      "S-4",
+      "H-4",
+      "D-9"
+    ],
+    "notes": [
+      "按当前牌权和剩余张数判断",
+      "优先考虑下一手"
+    ]
+  },
+  "options": [
+    {
+      "id": "trigger",
+      "label": "写下下次可执行的触发条件",
+      "feedback": "把错误转成下一局能检查的动作。"
+    },
+    {
+      "id": "blame",
+      "label": "只写当时很后悔",
+      "feedback": "情绪描述不能帮助下一次决策。"
+    }
+  ],
+  "recommendedOptionId": "trigger",
+  "conditions": [
+    "能回忆当时可见信息",
+    "条件足够具体"
+  ]
+}

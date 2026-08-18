@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "b02-basic-type",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "S-8 H-8 D-8 C-4 S-4 是什么牌型?",
+  "skillIds": [
+    "combinations"
+  ],
+  "lessonIds": [
+    "b02-deck-level-card"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "三张同点加一对构成三带二。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "triple-two",
+      "label": "三带二"
+    },
+    {
+      "id": "straight",
+      "label": "顺子"
+    },
+    {
+      "id": "five",
+      "label": "五张散牌"
+    }
+  ],
+  "correctOptionId": "triple-two"
+}

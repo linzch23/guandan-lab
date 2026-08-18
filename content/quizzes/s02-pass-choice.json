@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "s02-pass-choice",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "哪种情况更适合主动过牌?",
+  "skillIds": [
+    "control"
+  ],
+  "lessonIds": [
+    "s02-play-order"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "过牌可以保留结构和后续主动权。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "tail",
+      "label": "接牌会拆掉关键组合"
+    },
+    {
+      "id": "must",
+      "label": "只要能压就必须压"
+    },
+    {
+      "id": "none",
+      "label": "完全不看局面"
+    }
+  ],
+  "correctOptionId": "tail"
+}

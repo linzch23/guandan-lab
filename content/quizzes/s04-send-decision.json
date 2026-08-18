@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "s04-send-decision",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "你能压住牌，但对家只剩一张且对手还剩五张，怎么做?",
+  "skillIds": [
+    "partnership"
+  ],
+  "lessonIds": [
+    "s04-bombs-and-wildcards"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "让牌必须同时检查对手威胁。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "7",
+    "yourHand": [
+      "S-7",
+      "H-7",
+      "D-Q",
+      "C-K"
+    ],
+    "notes": [
+      "按当前牌权和剩余张数判断",
+      "优先考虑下一手"
+    ]
+  },
+  "options": [
+    {
+      "id": "pass",
+      "label": "先过牌让对家尝试接",
+      "feedback": "若对家能接，可直接形成出完机会。"
+    },
+    {
+      "id": "take",
+      "label": "立即用大牌抢走",
+      "cards": [
+        "C-K"
+      ],
+      "feedback": "可能夺走对家的安全接牌窗口。"
+    }
+  ],
+  "recommendedOptionId": "pass",
+  "conditions": [
+    "对手当前没有一手出完牌型",
+    "对家有可能合法接牌"
+  ]
+}

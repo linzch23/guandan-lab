@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "s02-control-compare",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "哪种牌权更有连续价值?",
+  "skillIds": [
+    "control"
+  ],
+  "lessonIds": [
+    "s02-play-order"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "能带来下一手计划的牌权更有价值。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "comparison",
+  "levelRank": "7",
+  "groups": [
+    {
+      "id": "a",
+      "label": "赢下后只能出孤张",
+      "cards": [
+        "S-A"
+      ]
+    },
+    {
+      "id": "b",
+      "label": "赢下后可出完整对子",
+      "cards": [
+        "H-8",
+        "D-8"
+      ]
+    }
+  ],
+  "correctGroupId": "b"
+}

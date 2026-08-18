@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "b01-quick-type-compare",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "判断名次时，哪种记录最完整?",
+  "skillIds": [
+    "game-goal"
+  ],
+  "lessonIds": [
+    "b01-introduction"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "升级要看双方完整名次组合。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "comparison",
+  "levelRank": "7",
+  "groups": [
+    {
+      "id": "a",
+      "label": "我方头游、对家三游",
+      "cards": [
+        "S-A",
+        "H-A"
+      ]
+    },
+    {
+      "id": "b",
+      "label": "我赢了",
+      "cards": [
+        "D-K"
+      ]
+    }
+  ],
+  "correctGroupId": "a"
+}

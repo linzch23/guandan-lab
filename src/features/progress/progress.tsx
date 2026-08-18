@@ -5,6 +5,7 @@ import { createContext, type ReactNode, useCallback, useContext, useEffect, useM
 import type { ContentIndex, TrackId } from "../../content/schema";
 
 export const STORAGE_KEY = "guandan-lab.progress.v1";
+export const CONTENT_REVISION = 2;
 
 const QuestionProgressSchema = Type.Object({
   attempts: Type.Integer({ minimum: 1 }),
@@ -16,6 +17,7 @@ const QuestionProgressSchema = Type.Object({
 const AssessmentProgressSchema = Type.Object({ attempts: Type.Integer({ minimum: 1 }), bestScore: Type.Number({ minimum: 0, maximum: 100 }), latestScore: Type.Number({ minimum: 0, maximum: 100 }), passedAt: Type.Optional(Type.String()) });
 const ProgressSchema = Type.Object({
   schemaVersion: Type.Literal(1),
+  contentRevision: Type.Optional(Type.Literal(2)),
   completedLessonIds: Type.Array(Type.String(), { uniqueItems: true }),
   questions: Type.Record(Type.String(), QuestionProgressSchema),
   assessments: Type.Partial(Type.Object({ beginner: AssessmentProgressSchema, skills: AssessmentProgressSchema })),
@@ -30,14 +32,16 @@ type Action =
   | { type: "location"; kind: "lesson" | "training" | "assessment"; id?: string }
   | { type: "reset" };
 
-export const emptyProgress = (): ProgressV1 => ({ schemaVersion: 1, completedLessonIds: [], questions: {}, assessments: {} });
+export const emptyProgress = (): ProgressV1 => ({ schemaVersion: 1, contentRevision: CONTENT_REVISION, completedLessonIds: [], questions: {}, assessments: {} });
 
 export function loadProgress(storage: Pick<Storage, "getItem"> = localStorage): ProgressV1 {
   try {
     const raw = storage.getItem(STORAGE_KEY);
     if (!raw) return emptyProgress();
     const parsed: unknown = JSON.parse(raw);
-    return Value.Check(ProgressSchema, parsed) ? parsed : emptyProgress();
+    if (!Value.Check(ProgressSchema, parsed)) return emptyProgress();
+    if (parsed.contentRevision === CONTENT_REVISION) return parsed;
+    return { ...parsed, contentRevision: CONTENT_REVISION, assessments: {} };
   } catch {
     return emptyProgress();
   }

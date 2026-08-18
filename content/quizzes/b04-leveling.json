@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "b04-leveling",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "判断升级时首先要记录什么?",
+  "skillIds": [
+    "leveling"
+  ],
+  "lessonIds": [
+    "b04-bombs-special"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "升级依据名次组合而非单人感觉。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "rank",
+      "label": "双方四人的完整名次"
+    },
+    {
+      "id": "only-me",
+      "label": "只记自己名次"
+    },
+    {
+      "id": "points",
+      "label": "只记剩余点数"
+    }
+  ],
+  "correctOptionId": "rank"
+}

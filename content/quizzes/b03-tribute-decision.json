@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "b03-tribute-decision",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "进贡前你有一张孤立大牌和一组可衔接对子，优先考虑哪张?",
+  "skillIds": [
+    "tribute"
+  ],
+  "lessonIds": [
+    "b03-basic-combinations"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "进贡要兼顾规则限制和下一局结构。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "7",
+    "yourHand": [
+      "S-A",
+      "H-9",
+      "D-9",
+      "C-10"
+    ],
+    "notes": [
+      "按当前牌权和剩余张数判断",
+      "优先考虑下一手"
+    ]
+  },
+  "options": [
+    {
+      "id": "single",
+      "label": "交孤立大牌",
+      "cards": [
+        "S-A"
+      ],
+      "feedback": "不破坏下局的成组牌，但仍需按赛事规则确认限制。"
+    },
+    {
+      "id": "pair",
+      "label": "拆对子进贡",
+      "cards": [
+        "H-9"
+      ],
+      "feedback": "拆组可能增加下局手数。"
+    }
+  ],
+  "recommendedOptionId": "single",
+  "conditions": [
+    "交换对象和牌点限制已确认",
+    "孤立大牌不是下局唯一控制牌"
+  ]
+}

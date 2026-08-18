@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "b03-round-compare",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "对方领出对子，哪组可以正常比较?",
+  "skillIds": [
+    "turn-flow"
+  ],
+  "lessonIds": [
+    "b03-basic-combinations"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "跟牌必须牌型和张数一致。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "comparison",
+  "levelRank": "7",
+  "groups": [
+    {
+      "id": "a",
+      "label": "一对 10",
+      "cards": [
+        "S-10",
+        "H-10"
+      ]
+    },
+    {
+      "id": "b",
+      "label": "三张 J",
+      "cards": [
+        "D-J",
+        "C-J",
+        "S-J"
+      ]
+    }
+  ],
+  "correctGroupId": "a"
+}

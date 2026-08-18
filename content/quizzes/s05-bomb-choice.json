@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "s05-bomb-choice",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "使用唯一炸弹前先问什么?",
+  "skillIds": [
+    "bombs-wildcards"
+  ],
+  "lessonIds": [
+    "s05-card-memory"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "炸弹价值来自时机、目标和失败代价。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "value",
+      "label": "能否改变关键牌权或出完结果"
+    },
+    {
+      "id": "early",
+      "label": "越早用越好"
+    },
+    {
+      "id": "size",
+      "label": "只看张数"
+    }
+  ],
+  "correctOptionId": "value"
+}

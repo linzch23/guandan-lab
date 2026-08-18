@@ -12,6 +12,6 @@
   { "id": "bombs-wildcards", "title": "炸弹与逢人配", "group": "basic-strategy", "description": "评估稀缺资源带来的实际收益。", "order": 11, "availability": "available" },
   { "id": "card-memory", "title": "基础记牌", "group": "memory", "description": "优先记录会改变决策的关键牌。", "order": 12, "availability": "available" },
   { "id": "partnership", "title": "对家配合", "group": "partnership", "description": "从对家行动推断需求并协作交接牌权。", "order": 13, "availability": "available" },
-  { "id": "endgames", "title": "高级残局", "group": "advanced", "description": "多手次残局求解与复盘。", "order": 14, "availability": "roadmap" },
+  { "id": "endgames", "title": "高级残局", "group": "advanced", "description": "多手次残局求解与复盘。", "order": 14, "availability": "available" },
   { "id": "opponent-modeling", "title": "对手建模", "group": "advanced", "description": "根据历史行动更新对手范围。", "order": 15, "availability": "roadmap" }
 ]

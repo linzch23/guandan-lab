@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "b01-quick-level",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "本局打 7 时，哪张牌是逢人配?",
+  "skillIds": [
+    "deck-level"
+  ],
+  "lessonIds": [
+    "b01-introduction"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "当前级牌的红桃牌是百搭牌。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "h7",
+      "label": "红桃 7"
+    },
+    {
+      "id": "h2",
+      "label": "红桃 2"
+    },
+    {
+      "id": "bj",
+      "label": "小王"
+    }
+  ],
+  "correctOptionId": "h7"
+}

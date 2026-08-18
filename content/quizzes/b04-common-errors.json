@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "b04-common-errors",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "哪项最符合入门阶段的正确目标?",
+  "skillIds": [
+    "game-goal"
+  ],
+  "lessonIds": [
+    "b04-bombs-special"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "搭档游戏要同时考虑本方两人的出完路线。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "team",
+      "label": "先保证本队名次组合"
+    },
+    {
+      "id": "rush",
+      "label": "每轮都抢牌"
+    },
+    {
+      "id": "bomb",
+      "label": "有炸弹就马上出"
+    }
+  ],
+  "correctOptionId": "team"
+}

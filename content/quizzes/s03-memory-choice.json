@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "s03-memory-choice",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "轻量记牌最值得优先记录什么?",
+  "skillIds": [
+    "card-memory"
+  ],
+  "lessonIds": [
+    "s03-control-and-pass"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "记录会改变近期决策的信息即可。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "key",
+      "label": "炸弹、大牌、级牌和剩余张数"
+    },
+    {
+      "id": "all",
+      "label": "全部 108 张"
+    },
+    {
+      "id": "suit",
+      "label": "只记花色"
+    }
+  ],
+  "correctOptionId": "key"
+}

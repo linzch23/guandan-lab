@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "s04-block-decision",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "对手只剩一张，而对家还有三张，当前轮应优先什么?",
+  "skillIds": [
+    "partnership"
+  ],
+  "lessonIds": [
+    "s04-bombs-and-wildcards"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "配合要服从风险排序。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "7",
+    "yourHand": [
+      "S-5",
+      "H-5",
+      "D-9",
+      "C-9",
+      "S-A"
+    ],
+    "notes": [
+      "按当前牌权和剩余张数判断",
+      "优先考虑下一手"
+    ]
+  },
+  "options": [
+    {
+      "id": "block",
+      "label": "先封住对手的领出机会",
+      "cards": [
+        "S-A"
+      ],
+      "feedback": "先处理更紧迫的出完威胁，再安排交接。"
+    },
+    {
+      "id": "give",
+      "label": "无条件让给对家",
+      "feedback": "让牌可能直接把主动权送给对手。"
+    }
+  ],
+  "recommendedOptionId": "block",
+  "conditions": [
+    "对手下一手有合法领出可能",
+    "你有低代价控制牌"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "s04-partner-choice",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "对家只剩两张时，配合重点是什么?",
+  "skillIds": [
+    "partnership"
+  ],
+  "lessonIds": [
+    "s04-bombs-and-wildcards"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "对家接牌或领出机会比个人炫技重要。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "handoff",
+      "label": "创造安全的牌权交接"
+    },
+    {
+      "id": "rush",
+      "label": "把自己的牌先出完"
+    },
+    {
+      "id": "bomb",
+      "label": "无条件使用炸弹"
+    }
+  ],
+  "correctOptionId": "handoff"
+}

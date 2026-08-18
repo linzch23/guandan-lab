@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "s05-wildcard-choice",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "手中已有完整顺子时，逢人配通常更灵活的处理是?",
+  "skillIds": [
+    "bombs-wildcards"
+  ],
+  "lessonIds": [
+    "s05-card-memory"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "完整结构已存在，保留百搭牌可以增加后续选择。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "keep",
+      "label": "先保留观察"
+    },
+    {
+      "id": "force",
+      "label": "强行补另一组"
+    },
+    {
+      "id": "discard",
+      "label": "当普通小牌丢掉"
+    }
+  ],
+  "correctOptionId": "keep"
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "s01-scan-choice",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "起手评估最先看什么?",
+  "skillIds": [
+    "hand-organization"
+  ],
+  "lessonIds": [
+    "s01-hand-organization"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "先看能否组成可执行的出完路线。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "structure",
+      "label": "牌型结构和缺口"
+    },
+    {
+      "id": "suits",
+      "label": "花色是否平均"
+    },
+    {
+      "id": "big",
+      "label": "只数大牌"
+    }
+  ],
+  "correctOptionId": "structure"
+}

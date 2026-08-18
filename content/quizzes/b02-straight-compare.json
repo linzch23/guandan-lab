@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "b02-straight-compare",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "同为五连顺时，哪组更大?",
+  "skillIds": [
+    "ranking"
+  ],
+  "lessonIds": [
+    "b02-deck-level-card"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "比较同型顺子的最大牌。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "comparison",
+  "levelRank": "7",
+  "groups": [
+    {
+      "id": "a",
+      "label": "7-8-9-10-J",
+      "cards": [
+        "S-7",
+        "H-8",
+        "D-9",
+        "C-10",
+        "S-J"
+      ]
+    },
+    {
+      "id": "b",
+      "label": "6-7-8-9-10",
+      "cards": [
+        "S-6",
+        "H-7",
+        "D-8",
+        "C-9",
+        "S-10"
+      ]
+    }
+  ],
+  "correctGroupId": "a"
+}
