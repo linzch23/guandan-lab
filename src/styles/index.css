@@ -68,6 +68,9 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .button.ghost { background: transparent; color: var(--green); border-color: var(--line); }
 .button.danger { background: transparent; color: var(--red); border-color: #cda6a1; }
 .button.danger:hover { background: var(--red-soft); }
+.icon-button { width: 38px; height: 38px; display: inline-grid; place-items: center; border: 1px solid var(--line); border-radius: 5px; background: transparent; color: var(--muted); cursor: pointer; }
+.icon-button:hover { color: var(--ink); border-color: var(--green); }
+.icon-button svg { width: 18px; }
 
 .home-page { padding-top: 36px; }
 .home-intro { min-height: 360px; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 64px; align-items: center; padding: 30px 0 56px; }
@@ -116,23 +119,46 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .lesson-duration { display: flex; gap: 5px; align-items: center; color: var(--muted); font-size: 12px; }
 .lesson-duration svg { width: 15px; }
 
-.lesson-page { max-width: 1120px; }
+.lesson-page { width: min(1320px, calc(100% - 40px)); max-width: none; padding-bottom: 30px; }
 .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: 13px; margin-bottom: 34px; }
 .back-link svg { width: 16px; }
-.lesson-header { max-width: 800px; padding-bottom: 36px; border-bottom: 1px solid var(--line); }
+.lesson-header { max-width: none; padding-bottom: 36px; border-bottom: 1px solid var(--line); }
 .lesson-header h1 { font-size: clamp(38px, 6vw, 64px); }
+.lesson-header > p { max-width: 780px; }
 .lesson-kicker { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--green); font-weight: 750; font-size: 12px; margin-bottom: 14px; }
 .objective-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
 .objective-list span, .tag { padding: 5px 9px; background: var(--green-soft); color: #235943; font-size: 12px; border: 1px solid #c8dfd2; border-radius: 4px; }
-.lesson-layout { display: grid; grid-template-columns: minmax(0, 760px) 220px; gap: 80px; margin-top: 42px; align-items: start; }
+.lesson-mobile-tools { display: none; }
+.lesson-layout { display: grid; grid-template-columns: 210px minmax(0, 1fr) 190px; gap: 32px; margin-top: 42px; align-items: start; }
+.lesson-directory-shell, .lesson-section-nav-shell { min-width: 0; align-self: stretch; }
+.lesson-directory, .lesson-section-nav { position: sticky; top: 104px; max-height: calc(100dvh - 128px); overflow-y: auto; overscroll-behavior: contain; }
+.lesson-directory-heading, .lesson-section-nav-heading { padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.lesson-directory-heading .eyebrow, .lesson-section-nav-heading .eyebrow { margin-bottom: 5px; }
+.lesson-directory-heading strong, .lesson-section-nav-heading strong { font-size: 14px; }
+.lesson-directory-group { margin-top: 20px; }
+.lesson-directory-group h2 { margin: 0 0 8px; color: var(--muted); font-size: 11px; font-weight: 800; }
+.lesson-directory-list { display: grid; gap: 2px; }
+.lesson-directory-item { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 8px; align-items: start; padding: 8px 7px; border-left: 2px solid transparent; color: var(--muted); }
+.lesson-directory-item:hover { background: #f3f2ed; color: var(--ink); }
+.lesson-directory-item.active { border-left-color: var(--green); background: var(--green-soft); color: var(--ink); }
+.lesson-directory-index { width: 24px; height: 24px; display: grid; place-items: center; border: 1px solid #c3c5be; font-family: ui-monospace, monospace; font-size: 10px; }
+.lesson-directory-index.completed { color: white; background: var(--green); border-color: var(--green); }
+.lesson-directory-index svg { width: 14px; }
+.lesson-directory-copy strong, .lesson-directory-copy small { display: block; }
+.lesson-directory-copy strong { font-size: 12px; line-height: 1.35; }
+.lesson-directory-copy small { margin-top: 3px; font-size: 10px; color: var(--muted); }
 .lesson-content { min-width: 0; }
 .lesson-content > h2 { font-size: 27px; margin: 44px 0 14px; }
 .lesson-content > h2:first-child { margin-top: 0; }
 .lesson-content > p, .lesson-content > ul, .lesson-content > ol { font-family: Georgia, "Noto Serif SC", serif; font-size: 17px; line-height: 1.9; }
 .lesson-content li { margin: 7px 0; }
-.lesson-toc { position: sticky; top: 112px; border-left: 2px solid var(--green); padding-left: 18px; color: var(--muted); font-size: 13px; }
-.lesson-toc strong { color: var(--ink); }
-.lesson-toc ol { padding-left: 18px; line-height: 1.65; }
+.lesson-section-nav { border-left: 2px solid var(--green); padding-left: 16px; color: var(--muted); font-size: 12px; }
+.lesson-section-nav ol { display: grid; gap: 3px; padding: 0; margin: 14px 0 0; list-style: none; }
+.lesson-section-nav a { display: block; padding: 6px 7px; border-left: 2px solid transparent; line-height: 1.45; }
+.lesson-section-nav a:hover { color: var(--ink); background: #f3f2ed; }
+.lesson-section-nav a.active { color: var(--green); border-left-color: var(--green); background: var(--green-soft); font-weight: 750; }
+.lesson-content > h2 { scroll-margin-top: 104px; }
+.lesson-drawer-layer { display: none; }
 .card-example { margin: 30px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 20px 0; }
 .card-example figcaption { display: flex; justify-content: space-between; gap: 14px; font-weight: 750; margin-bottom: 18px; }
 .card-example figcaption span { color: var(--green); font-size: 12px; }
@@ -305,8 +331,18 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
   .mobile-nav svg { width: 20px; height: 20px; }
   .site-footer { padding-bottom: 84px; }
   .home-intro { grid-template-columns: 1fr 220px; gap: 30px; }
-  .lesson-layout { grid-template-columns: 1fr; }
-  .lesson-toc { display: none; }
+  .lesson-page { width: min(100% - 28px, 1120px); }
+  .lesson-mobile-tools { display: flex; gap: 8px; margin-top: 18px; }
+  .lesson-mobile-tools .button { min-height: 38px; padding: 7px 10px; font-size: 12px; }
+  .lesson-mobile-tools .button svg { width: 16px; }
+  .lesson-layout { grid-template-columns: 1fr; margin-top: 24px; }
+  .lesson-directory-shell, .lesson-section-nav-shell { display: none; }
+  .lesson-drawer-layer { display: block; position: fixed; inset: 0; z-index: 80; background: rgba(32,35,31,.38); }
+  .lesson-drawer { position: absolute; top: 0; bottom: 0; left: 0; width: min(330px, calc(100vw - 44px)); overflow-y: auto; padding: 20px 18px 84px; background: var(--paper); box-shadow: 8px 0 24px rgba(32,35,31,.16); }
+  .lesson-drawer-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+  .lesson-drawer .lesson-directory, .lesson-drawer .lesson-section-nav { position: static; max-height: none; overflow: visible; margin-top: 18px; }
+  .lesson-drawer .lesson-section-nav { border-left: 0; padding-left: 0; }
+  .lesson-drawer .lesson-directory-heading, .lesson-drawer .lesson-section-nav-heading { display: none; }
   .session-page { width: min(100% - 28px, 1120px); height: calc(100dvh - 167px); min-height: 560px; display: flex; flex-direction: column; padding-top: 20px; padding-bottom: 12px; }
   .training-session-page > .back-link { flex: 0 0 auto; margin-bottom: 12px; }
   .session-runner, .assessment-session-page .session-runner { flex: 1 1 auto; height: auto; min-height: 0; display: flex; flex-direction: column; overflow: hidden; border: 0; background: transparent; }
@@ -330,6 +366,7 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
   .brand-mark { width: 31px; height: 31px; }
   .draft-banner { font-size: 11px; text-align: left; padding: 7px 16px; }
   .page { width: min(100% - 28px, 1120px); padding: 36px 0 78px; }
+  .lesson-page { padding-bottom: 78px; }
   .session-page { height: calc(100dvh - 172px); min-height: 520px; padding-top: 16px; padding-bottom: 10px; }
   .page-header { margin-bottom: 34px; }
   .page-header h1 { font-size: 38px; }

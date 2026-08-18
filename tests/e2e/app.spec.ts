@@ -33,6 +33,61 @@ test("lesson navigation starts the next lesson at the top", async ({ page }) => 
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
 });
 
+test("lesson reading layout provides directory and chapter navigation", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto("#/learn/b01-introduction");
+  await expect(page.locator(".lesson-directory-shell")).toBeVisible();
+  await expect(page.locator(".lesson-section-nav-shell")).toBeVisible();
+  await expect(page.getByRole("link", { name: /快速认识掼蛋/ }).first()).toHaveAttribute("aria-current", "page");
+  await expect(page.locator(".lesson-section-nav a").first()).toHaveText("先记住四句话");
+
+  await page.locator(".lesson-section-nav a").nth(1).click();
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(0);
+  await page.locator(".lesson-content h2").nth(1).scrollIntoViewIfNeeded();
+  await expect(page.locator(".lesson-section-nav a").nth(1)).toHaveClass(/active/);
+});
+
+test("desktop lesson sidebars stay visible while the page scrolls", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto("#/learn/b01-introduction");
+  await expect(page.getByRole("heading", { name: "快速认识掼蛋" })).toBeVisible();
+  const sidebars = page.locator(".lesson-directory, .lesson-section-nav");
+  await page.evaluate(() => {
+    document.documentElement.style.scrollBehavior = "auto";
+    window.scrollTo(0, document.body.scrollHeight);
+  });
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(0);
+  const geometry = await sidebars.evaluateAll((elements) => elements.map((element) => {
+    const rect = element.getBoundingClientRect();
+    return { top: rect.top, bottom: rect.bottom, height: rect.height, overflow: element.scrollHeight > element.clientHeight };
+  }));
+  for (const sidebar of geometry) {
+    expect(sidebar.top).toBeGreaterThanOrEqual(100);
+    expect(sidebar.bottom).toBeGreaterThan(100);
+    expect(sidebar.height).toBeGreaterThan(0);
+  }
+  expect(geometry[0].overflow).toBe(false);
+  expect(geometry[1].overflow).toBe(false);
+});
+
+test("mobile lesson tools open and close directory drawers", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("#/learn/b01-introduction");
+  await page.getByRole("button", { name: "课程目录" }).click();
+  await expect(page.getByRole("dialog", { name: "课程目录" })).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+  await page.getByRole("button", { name: "课程目录" }).click();
+  await page.getByRole("dialog", { name: "课程目录" }).getByRole("link", { name: /牌型与大小/ }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+  await expect(page.getByRole("heading", { name: "牌型与大小" })).toBeVisible();
+
+  await page.getByRole("button", { name: "章节导航" }).click();
+  await expect(page.getByRole("dialog", { name: "章节导航" })).toBeVisible();
+  await page.getByRole("dialog", { name: "章节导航" }).getByRole("link", { name: "炸弹和同花顺" }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+});
+
 test("filtered training writes skill progress", async ({ page }) => {
   await page.goto("#/train?skillId=control");
   await expect(page.getByLabel("知识标签")).toHaveValue("control");

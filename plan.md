@@ -89,3 +89,10 @@ React、TypeScript、Vite、Tailwind、React Router HashRouter、TypeBox、React
 | 完成时机 | 全题提交后 | 防止自由跳题造成漏答完成 |
 | 断点 | 沿用 860px | 与现有桌面/移动主导航切换一致 |
 | 课程滚动 | 课程标识变化后立即归零 | 行为确定，兼容减少动态效果设置 |
+
+## 2026-08-18 课程阅读布局技术设计
+
+- `LessonDirectory` 根据 `content.tracks`、`lessonIds` 和当前进度渲染全量课程目录；桌面端 sticky 且独立滚动，移动端复用到抽屉。
+- `deriveLessonSections` 从课程正文提取 `##` 标题，生成带序号的稳定 HTML ID；`LessonToc` 使用 `IntersectionObserver` 同步当前章节并处理平滑跳转。
+- `LessonPage` 为 Markdown `h2` 注入章节 ID，桌面端使用目录/正文/章节三栏，移动端使用顶部工具按钮和遮罩抽屉。
+- 不改内容 Schema、题目、评分或进度；侧栏展开状态只存在当前页面会话。
