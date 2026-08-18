@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "s06-decision-two",
+  "trackId": "skills",
+  "difficulty": 3,
+  "prompt": "对家已经用对 K 领先，你有对级牌但没有清楚后续。怎么做？",
+  "skillIds": [
+    "partnership"
+  ],
+  "lessonIds": [
+    "s06-partner-coordination"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "配合的核心是让本方更适合的人持有牌权，而不是抢走每一次领先。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "6",
+    "yourHand": [
+      "S-6",
+      "D-6",
+      "C-4",
+      "D-7"
+    ],
+    "previousPlay": [
+      "S-K",
+      "H-K"
+    ],
+    "notes": [
+      "上一手来自对家",
+      "对手均未报少牌"
+    ]
+  },
+  "options": [
+    {
+      "id": "pass",
+      "label": "过牌，让对家保持领先",
+      "feedback": "没有紧迫风险或后续收益时，不应无意义压制对家。"
+    },
+    {
+      "id": "cover",
+      "label": "用对级牌压住对家",
+      "cards": [
+        "S-6",
+        "D-6"
+      ],
+      "feedback": "消耗控制牌并打断对家的牌权，收益不明确。"
+    }
+  ],
+  "recommendedOptionId": "pass",
+  "conditions": [
+    "当前没有对手即将出完",
+    "对家打出的对 K 仍然领先"
+  ]
+}

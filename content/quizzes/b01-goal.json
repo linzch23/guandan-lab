@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "b01-goal",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "掼蛋中，与你组成同一队的是谁？",
+  "skillIds": [
+    "game-goal"
+  ],
+  "lessonIds": [
+    "b01-introduction"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "四人牌桌中，相对而坐的两人是搭档。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "opposite",
+      "label": "与你相对而坐的玩家"
+    },
+    {
+      "id": "left",
+      "label": "你左手边的玩家"
+    },
+    {
+      "id": "fastest",
+      "label": "本局最先出完的玩家"
+    }
+  ],
+  "correctOptionId": "opposite"
+}

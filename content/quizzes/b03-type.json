@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "b03-type",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "三张 Q 加一对 8 组成什么牌型？",
+  "skillIds": [
+    "combinations"
+  ],
+  "lessonIds": [
+    "b03-basic-combinations"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "三张同点数加一对构成三带二，共五张。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "triple",
+      "label": "三张"
+    },
+    {
+      "id": "full",
+      "label": "三带二"
+    },
+    {
+      "id": "straight",
+      "label": "顺子"
+    }
+  ],
+  "correctOptionId": "full"
+}

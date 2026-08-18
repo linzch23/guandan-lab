@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "s03-decision-two",
+  "trackId": "skills",
+  "difficulty": 3,
+  "prompt": "右手对手只剩两张且刚打出一对 Q，你有对级牌。如何处理？",
+  "skillIds": [
+    "control"
+  ],
+  "lessonIds": [
+    "s03-control-and-pass"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "当牌权直接决定对手是否出完时，应提高拦截优先级。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "6",
+    "yourHand": [
+      "S-6",
+      "D-6",
+      "C-4",
+      "D-7"
+    ],
+    "previousPlay": [
+      "S-Q",
+      "H-Q"
+    ],
+    "notes": [
+      "上一手来自对手",
+      "该对手出完这手后将成为头游"
+    ]
+  },
+  "options": [
+    {
+      "id": "stop",
+      "label": "用对级牌拦截",
+      "cards": [
+        "S-6",
+        "D-6"
+      ],
+      "feedback": "即时阻止对手出完，牌权收益明确。"
+    },
+    {
+      "id": "pass",
+      "label": "过牌保留级牌",
+      "feedback": "会允许对手立即出完，保留资源失去意义。"
+    }
+  ],
+  "recommendedOptionId": "stop",
+  "conditions": [
+    "对级牌按当前规则可以压住该普通对子",
+    "没有更适合的本方玩家已明确准备接牌"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "s02-decision-two",
+  "trackId": "skills",
+  "difficulty": 3,
+  "prompt": "下家只剩一张牌时，你的出牌顺序应如何调整？",
+  "skillIds": [
+    "play-order"
+  ],
+  "lessonIds": [
+    "s02-play-order"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "出现即时出完威胁时，防守优先级高于常规的弱牌先行计划。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "6",
+    "yourHand": [
+      "C-3",
+      "S-10",
+      "H-10",
+      "RJ"
+    ],
+    "notes": [
+      "下家是对手且只剩 1 张",
+      "你拥有领出权"
+    ]
+  },
+  "options": [
+    {
+      "id": "control-first",
+      "label": "优先选择不易让下家接走的结构，并保留控制",
+      "cards": [
+        "S-10",
+        "H-10"
+      ],
+      "feedback": "先处理即时风险，再考虑自己的尾牌。"
+    },
+    {
+      "id": "small-single",
+      "label": "照常先出最小单张",
+      "cards": [
+        "C-3"
+      ],
+      "feedback": "可能直接给报单对手出完机会。"
+    }
+  ],
+  "recommendedOptionId": "control-first",
+  "conditions": [
+    "下家报单信息可靠",
+    "对子是当前可用且相对安全的领出结构"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "b02-wildcard-compare",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "当前打 6，下面哪张单牌属于级牌？",
+  "skillIds": [
+    "deck-level"
+  ],
+  "lessonIds": [
+    "b02-deck-level-card"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "当前打 6 时所有 6 都是级牌；红桃 6 同时是逢人配。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "comparison",
+  "levelRank": "6",
+  "groups": [
+    {
+      "id": "level",
+      "label": "红桃 6",
+      "cards": [
+        "H-6"
+      ]
+    },
+    {
+      "id": "ace",
+      "label": "黑桃 A",
+      "cards": [
+        "S-A"
+      ]
+    }
+  ],
+  "correctGroupId": "level"
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "s01-principle",
+  "trackId": "skills",
+  "difficulty": 1,
+  "prompt": "比较两种组牌方案时，最值得优先检查什么？",
+  "skillIds": [
+    "hand-organization"
+  ],
+  "lessonIds": [
+    "s01-hand-organization"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "组牌要服务于可执行的出完计划，尾牌成本比牌面整齐更重要。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "tail",
+      "label": "计划手数和最难处理的尾牌"
+    },
+    {
+      "id": "pretty",
+      "label": "牌摆得是否对称"
+    },
+    {
+      "id": "bomb-only",
+      "label": "只看炸弹数量"
+    }
+  ],
+  "correctOptionId": "tail"
+}

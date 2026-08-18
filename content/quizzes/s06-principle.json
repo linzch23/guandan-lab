@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "s06-principle",
+  "trackId": "skills",
+  "difficulty": 1,
+  "prompt": "对家只剩一张牌时，你首先应考虑什么？",
+  "skillIds": [
+    "partnership"
+  ],
+  "lessonIds": [
+    "s06-partner-coordination"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "对家报单时，单张领出机会可能直接帮助本方完成更好名次。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "single-access",
+      "label": "能否给对家一个单张出手机会"
+    },
+    {
+      "id": "own-bomb",
+      "label": "立刻展示自己的最大炸弹"
+    },
+    {
+      "id": "ignore",
+      "label": "对家牌数与我无关"
+    }
+  ],
+  "correctOptionId": "single-access"
+}

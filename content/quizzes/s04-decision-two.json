@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "s04-decision-two",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "牌局早期，对手只打出普通小对，你炸后没有合适后续。怎么做？",
+  "skillIds": [
+    "bombs-wildcards"
+  ],
+  "lessonIds": [
+    "s04-bombs-and-wildcards"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "低收益、无后续的早期炸弹通常应保留。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "8",
+    "yourHand": [
+      "S-Q",
+      "H-Q",
+      "D-Q",
+      "C-Q",
+      "C-3",
+      "D-5"
+    ],
+    "previousPlay": [
+      "S-7",
+      "H-7"
+    ],
+    "notes": [
+      "所有玩家都还有 15 张以上",
+      "你的其他牌仍然零散"
+    ]
+  },
+  "options": [
+    {
+      "id": "pass",
+      "label": "过牌，保留炸弹观察",
+      "feedback": "当前没有紧迫威胁，炸后也缺乏收益。"
+    },
+    {
+      "id": "bomb",
+      "label": "立即用四张 Q 炸",
+      "cards": [
+        "S-Q",
+        "H-Q",
+        "D-Q",
+        "C-Q"
+      ],
+      "feedback": "只换来一次没有计划的先手，机会成本过高。"
+    }
+  ],
+  "recommendedOptionId": "pass",
+  "conditions": [
+    "对手没有短牌或出完威胁",
+    "对家没有明确急需你接管牌权的信号"
+  ]
+}

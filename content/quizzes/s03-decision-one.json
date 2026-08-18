@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "s03-decision-one",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "对家打出一对 J，你能用唯一一对 A 压住；当前无出完威胁。怎么做？",
+  "skillIds": [
+    "control"
+  ],
+  "lessonIds": [
+    "s03-control-and-pass"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "配合场景中，能接不等于应接；让对家继续领出通常更有价值。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "6",
+    "yourHand": [
+      "S-A",
+      "D-A",
+      "C-4",
+      "D-7"
+    ],
+    "previousPlay": [
+      "S-J",
+      "H-J"
+    ],
+    "notes": [
+      "上一手来自对家",
+      "其他玩家都还有较多牌"
+    ]
+  },
+  "options": [
+    {
+      "id": "pass",
+      "label": "过牌，让对家继续持有牌权",
+      "feedback": "没有明确收益时保留唯一高对，更利于后续控制。"
+    },
+    {
+      "id": "cover",
+      "label": "立即用对 A 压住对家",
+      "cards": [
+        "S-A",
+        "D-A"
+      ],
+      "feedback": "会消耗控制牌，而且压的是对家的成功出牌。"
+    }
+  ],
+  "recommendedOptionId": "pass",
+  "conditions": [
+    "对家当前牌型已领先",
+    "没有对手即将出完的紧急风险"
+  ]
+}

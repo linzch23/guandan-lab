@@ -1,0 +1,539 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Quiz",
+  "anyOf": [
+    {
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "id",
+        "trackId",
+        "difficulty",
+        "prompt",
+        "skillIds",
+        "lessonIds",
+        "sourceIds",
+        "explanation",
+        "review",
+        "type",
+        "options",
+        "correctOptionId"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1,
+          "type": "number"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9-]*$",
+          "type": "string"
+        },
+        "trackId": {
+          "anyOf": [
+            {
+              "const": "beginner",
+              "type": "string"
+            },
+            {
+              "const": "skills",
+              "type": "string"
+            }
+          ]
+        },
+        "difficulty": {
+          "anyOf": [
+            {
+              "const": 1,
+              "type": "number"
+            },
+            {
+              "const": 2,
+              "type": "number"
+            },
+            {
+              "const": 3,
+              "type": "number"
+            }
+          ]
+        },
+        "prompt": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "skillIds": {
+          "minItems": 1,
+          "uniqueItems": true,
+          "type": "array",
+          "items": {
+            "pattern": "^[a-z][a-z0-9-]*$",
+            "type": "string"
+          }
+        },
+        "lessonIds": {
+          "minItems": 1,
+          "uniqueItems": true,
+          "type": "array",
+          "items": {
+            "pattern": "^[a-z][a-z0-9-]*$",
+            "type": "string"
+          }
+        },
+        "sourceIds": {
+          "minItems": 1,
+          "uniqueItems": true,
+          "type": "array",
+          "items": {
+            "pattern": "^[a-z][a-z0-9-]*$",
+            "type": "string"
+          }
+        },
+        "explanation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "review": {
+          "type": "object",
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "anyOf": [
+                {
+                  "const": "draft",
+                  "type": "string"
+                },
+                {
+                  "const": "approved",
+                  "type": "string"
+                }
+              ]
+            },
+            "reviewer": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "reviewedAt": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "type": "string"
+            }
+          }
+        },
+        "type": {
+          "const": "choice",
+          "type": "string"
+        },
+        "options": {
+          "minItems": 2,
+          "maxItems": 6,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "label"
+            ],
+            "properties": {
+              "id": {
+                "pattern": "^[a-z][a-z0-9-]*$",
+                "type": "string"
+              },
+              "label": {
+                "minLength": 1,
+                "type": "string"
+              }
+            }
+          }
+        },
+        "correctOptionId": {
+          "pattern": "^[a-z][a-z0-9-]*$",
+          "type": "string"
+        },
+        "feedbackByOption": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z][a-z0-9-]*$": {
+              "minLength": 1,
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "id",
+        "trackId",
+        "difficulty",
+        "prompt",
+        "skillIds",
+        "lessonIds",
+        "sourceIds",
+        "explanation",
+        "review",
+        "type",
+        "levelRank",
+        "groups",
+        "correctGroupId"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1,
+          "type": "number"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9-]*$",
+          "type": "string"
+        },
+        "trackId": {
+          "anyOf": [
+            {
+              "const": "beginner",
+              "type": "string"
+            },
+            {
+              "const": "skills",
+              "type": "string"
+            }
+          ]
+        },
+        "difficulty": {
+          "anyOf": [
+            {
+              "const": 1,
+              "type": "number"
+            },
+            {
+              "const": 2,
+              "type": "number"
+            },
+            {
+              "const": 3,
+              "type": "number"
+            }
+          ]
+        },
+        "prompt": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "skillIds": {
+          "minItems": 1,
+          "uniqueItems": true,
+          "type": "array",
+          "items": {
+            "pattern": "^[a-z][a-z0-9-]*$",
+            "type": "string"
+          }
+        },
+        "lessonIds": {
+          "minItems": 1,
+          "uniqueItems": true,
+          "type": "array",
+          "items": {
+            "pattern": "^[a-z][a-z0-9-]*$",
+            "type": "string"
+          }
+        },
+        "sourceIds": {
+          "minItems": 1,
+          "uniqueItems": true,
+          "type": "array",
+          "items": {
+            "pattern": "^[a-z][a-z0-9-]*$",
+            "type": "string"
+          }
+        },
+        "explanation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "review": {
+          "type": "object",
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "anyOf": [
+                {
+                  "const": "draft",
+                  "type": "string"
+                },
+                {
+                  "const": "approved",
+                  "type": "string"
+                }
+              ]
+            },
+            "reviewer": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "reviewedAt": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "type": "string"
+            }
+          }
+        },
+        "type": {
+          "const": "comparison",
+          "type": "string"
+        },
+        "levelRank": {
+          "pattern": "^(?:[2-9]|10|[JQKA])$",
+          "type": "string"
+        },
+        "groups": {
+          "minItems": 2,
+          "maxItems": 4,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "label",
+              "cards"
+            ],
+            "properties": {
+              "id": {
+                "pattern": "^[a-z][a-z0-9-]*$",
+                "type": "string"
+              },
+              "label": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "cards": {
+                "minItems": 1,
+                "maxItems": 10,
+                "type": "array",
+                "items": {
+                  "pattern": "^(?:[SHCD]-(?:[2-9]|10|[JQKA])|BJ|RJ)$",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "correctGroupId": {
+          "pattern": "^[a-z][a-z0-9-]*$",
+          "type": "string"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "id",
+        "trackId",
+        "difficulty",
+        "prompt",
+        "skillIds",
+        "lessonIds",
+        "sourceIds",
+        "explanation",
+        "review",
+        "type",
+        "situation",
+        "options",
+        "recommendedOptionId",
+        "conditions"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1,
+          "type": "number"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9-]*$",
+          "type": "string"
+        },
+        "trackId": {
+          "anyOf": [
+            {
+              "const": "beginner",
+              "type": "string"
+            },
+            {
+              "const": "skills",
+              "type": "string"
+            }
+          ]
+        },
+        "difficulty": {
+          "anyOf": [
+            {
+              "const": 1,
+              "type": "number"
+            },
+            {
+              "const": 2,
+              "type": "number"
+            },
+            {
+              "const": 3,
+              "type": "number"
+            }
+          ]
+        },
+        "prompt": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "skillIds": {
+          "minItems": 1,
+          "uniqueItems": true,
+          "type": "array",
+          "items": {
+            "pattern": "^[a-z][a-z0-9-]*$",
+            "type": "string"
+          }
+        },
+        "lessonIds": {
+          "minItems": 1,
+          "uniqueItems": true,
+          "type": "array",
+          "items": {
+            "pattern": "^[a-z][a-z0-9-]*$",
+            "type": "string"
+          }
+        },
+        "sourceIds": {
+          "minItems": 1,
+          "uniqueItems": true,
+          "type": "array",
+          "items": {
+            "pattern": "^[a-z][a-z0-9-]*$",
+            "type": "string"
+          }
+        },
+        "explanation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "review": {
+          "type": "object",
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "anyOf": [
+                {
+                  "const": "draft",
+                  "type": "string"
+                },
+                {
+                  "const": "approved",
+                  "type": "string"
+                }
+              ]
+            },
+            "reviewer": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "reviewedAt": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "type": "string"
+            }
+          }
+        },
+        "type": {
+          "const": "decision",
+          "type": "string"
+        },
+        "situation": {
+          "type": "object",
+          "required": [
+            "levelRank",
+            "yourHand",
+            "notes"
+          ],
+          "properties": {
+            "levelRank": {
+              "pattern": "^(?:[2-9]|10|[JQKA])$",
+              "type": "string"
+            },
+            "yourHand": {
+              "minItems": 1,
+              "maxItems": 27,
+              "type": "array",
+              "items": {
+                "pattern": "^(?:[SHCD]-(?:[2-9]|10|[JQKA])|BJ|RJ)$",
+                "type": "string"
+              }
+            },
+            "previousPlay": {
+              "maxItems": 10,
+              "type": "array",
+              "items": {
+                "pattern": "^(?:[SHCD]-(?:[2-9]|10|[JQKA])|BJ|RJ)$",
+                "type": "string"
+              }
+            },
+            "notes": {
+              "minItems": 1,
+              "type": "array",
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              }
+            }
+          }
+        },
+        "options": {
+          "minItems": 2,
+          "maxItems": 6,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "label",
+              "feedback"
+            ],
+            "properties": {
+              "id": {
+                "pattern": "^[a-z][a-z0-9-]*$",
+                "type": "string"
+              },
+              "label": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "cards": {
+                "maxItems": 10,
+                "type": "array",
+                "items": {
+                  "pattern": "^(?:[SHCD]-(?:[2-9]|10|[JQKA])|BJ|RJ)$",
+                  "type": "string"
+                }
+              },
+              "feedback": {
+                "minLength": 1,
+                "type": "string"
+              }
+            }
+          }
+        },
+        "recommendedOptionId": {
+          "pattern": "^[a-z][a-z0-9-]*$",
+          "type": "string"
+        },
+        "conditions": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          }
+        }
+      }
+    }
+  ]
+}

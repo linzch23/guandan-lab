@@ -1,0 +1,17 @@
+[
+  { "id": "game-goal", "title": "胜负目标", "group": "rules", "description": "理解搭档关系、出完顺序与升级目标。", "order": 1, "availability": "available" },
+  { "id": "deck-level", "title": "牌与级牌", "group": "rules", "description": "认识两副牌、级牌和红桃级牌。", "order": 2, "availability": "available" },
+  { "id": "combinations", "title": "牌型识别", "group": "rules", "description": "识别常见普通牌型与特殊牌型。", "order": 3, "availability": "available" },
+  { "id": "ranking", "title": "牌型比较", "group": "rules", "description": "在可比较的前提下判断大小。", "order": 4, "availability": "available" },
+  { "id": "turn-flow", "title": "出牌流程", "group": "rules", "description": "理解领出、接牌、过牌和新一轮。", "order": 5, "availability": "available" },
+  { "id": "tribute", "title": "进贡与还贡", "group": "rules", "description": "理解下一局开始前的进贡流程。", "order": 6, "availability": "available" },
+  { "id": "leveling", "title": "名次与升级", "group": "rules", "description": "根据搭档名次理解升级幅度。", "order": 7, "availability": "available" },
+  { "id": "hand-organization", "title": "理牌与组牌", "group": "basic-strategy", "description": "比较组合方案，减少难以处理的散牌。", "order": 8, "availability": "available" },
+  { "id": "play-order", "title": "出牌顺序", "group": "basic-strategy", "description": "根据回手和后续衔接安排先后。", "order": 9, "availability": "available" },
+  { "id": "control", "title": "牌权与过牌", "group": "basic-strategy", "description": "判断何时争夺、转移或放弃牌权。", "order": 10, "availability": "available" },
+  { "id": "bombs-wildcards", "title": "炸弹与逢人配", "group": "basic-strategy", "description": "评估稀缺资源带来的实际收益。", "order": 11, "availability": "available" },
+  { "id": "card-memory", "title": "基础记牌", "group": "memory", "description": "优先记录会改变决策的关键牌。", "order": 12, "availability": "available" },
+  { "id": "partnership", "title": "对家配合", "group": "partnership", "description": "从对家行动推断需求并协作交接牌权。", "order": 13, "availability": "available" },
+  { "id": "endgames", "title": "高级残局", "group": "advanced", "description": "多手次残局求解与复盘。", "order": 14, "availability": "roadmap" },
+  { "id": "opponent-modeling", "title": "对手建模", "group": "advanced", "description": "根据历史行动更新对手范围。", "order": 15, "availability": "roadmap" }
+]

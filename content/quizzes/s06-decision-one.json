@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "s06-decision-one",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "你有领出权，对家只剩一张，两个对手都还有多张。优先考虑什么？",
+  "skillIds": [
+    "partnership"
+  ],
+  "lessonIds": [
+    "s06-partner-coordination"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "在风险可控时，让领出牌型匹配对家的剩余张数是基础配合。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "6",
+    "yourHand": [
+      "C-3",
+      "S-9",
+      "H-9",
+      "RJ"
+    ],
+    "notes": [
+      "对家只剩 1 张",
+      "对手没有已知的单张绝对控制"
+    ]
+  },
+  "options": [
+    {
+      "id": "lead-single",
+      "label": "领出低单张，给对家参与机会",
+      "cards": [
+        "C-3"
+      ],
+      "feedback": "牌型与对家的剩余张数匹配。"
+    },
+    {
+      "id": "lead-pair",
+      "label": "领出对子",
+      "cards": [
+        "S-9",
+        "H-9"
+      ],
+      "feedback": "对家只剩一张，无法用对子完成出牌。"
+    }
+  ],
+  "recommendedOptionId": "lead-single",
+  "conditions": [
+    "对家报单信息可靠",
+    "没有明确证据表明低单会让下家直接出完"
+  ]
+}

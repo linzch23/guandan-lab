@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "title",
+      "publisher",
+      "url",
+      "accessedAt"
+    ],
+    "properties": {
+      "id": {
+        "pattern": "^[a-z][a-z0-9-]*$",
+        "type": "string"
+      },
+      "title": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "publisher": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "publishedAt": {
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+        "type": "string"
+      },
+      "url": {
+        "pattern": "^https?://",
+        "type": "string"
+      },
+      "accessedAt": {
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+        "type": "string"
+      },
+      "license": {
+        "minLength": 1,
+        "type": "string"
+      }
+    }
+  }
+}

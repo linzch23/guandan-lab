@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "s02-principle",
+  "trackId": "skills",
+  "difficulty": 1,
+  "prompt": "安排出牌顺序时，什么是“回手牌”？",
+  "skillIds": [
+    "play-order"
+  ],
+  "lessonIds": [
+    "s02-play-order"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "回手牌的价值在于帮助你重新获得领出权，继续执行后续计划。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "control",
+      "label": "有机会重新拿到领出权的控制牌"
+    },
+    {
+      "id": "first",
+      "label": "起手摸到的第一张牌"
+    },
+    {
+      "id": "tribute",
+      "label": "还贡收到的任意牌"
+    }
+  ],
+  "correctOptionId": "control"
+}

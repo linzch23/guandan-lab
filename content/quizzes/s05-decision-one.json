@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "s05-decision-one",
+  "trackId": "skills",
+  "difficulty": 2,
+  "prompt": "你计划用对 K 收尾，记牌时应优先更新什么？",
+  "skillIds": [
+    "card-memory"
+  ],
+  "lessonIds": [
+    "s05-card-memory"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "记牌应围绕下一次决策建立优先级。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "decision",
+  "situation": {
+    "levelRank": "6",
+    "yourHand": [
+      "S-K",
+      "D-K",
+      "C-4"
+    ],
+    "notes": [
+      "你准备最后走对 K",
+      "本局使用两副牌"
+    ]
+  },
+  "options": [
+    {
+      "id": "higher-pairs",
+      "label": "A、级牌和王的出现情况",
+      "feedback": "这些牌最可能改变对 K 能否控制局面。"
+    },
+    {
+      "id": "all-threes",
+      "label": "所有 3 的花色",
+      "feedback": "与当前对 K 收尾计划关系较弱。"
+    }
+  ],
+  "recommendedOptionId": "higher-pairs",
+  "conditions": [
+    "对 K 是当前计划中的关键收尾牌型"
+  ]
+}

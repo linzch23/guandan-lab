@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "b06-follow",
+  "trackId": "beginner",
+  "difficulty": 1,
+  "prompt": "对方领出一对 9，你不使用炸弹时，合法的接牌思路是什么？",
+  "skillIds": [
+    "turn-flow"
+  ],
+  "lessonIds": [
+    "b06-turn-flow"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "普通接牌需要相同类型和结构，并且更大。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "choice",
+  "options": [
+    {
+      "id": "higher-pair",
+      "label": "出一对更大的牌"
+    },
+    {
+      "id": "single",
+      "label": "出一张 A"
+    },
+    {
+      "id": "triple",
+      "label": "出三张 10"
+    }
+  ],
+  "correctOptionId": "higher-pair"
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "title",
+      "description",
+      "lessonIds",
+      "assessmentQuestionIds"
+    ],
+    "properties": {
+      "id": {
+        "anyOf": [
+          {
+            "const": "beginner",
+            "type": "string"
+          },
+          {
+            "const": "skills",
+            "type": "string"
+          }
+        ]
+      },
+      "title": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "description": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "lessonIds": {
+        "minItems": 1,
+        "uniqueItems": true,
+        "type": "array",
+        "items": {
+          "pattern": "^[a-z][a-z0-9-]*$",
+          "type": "string"
+        }
+      },
+      "assessmentQuestionIds": {
+        "minItems": 10,
+        "maxItems": 10,
+        "uniqueItems": true,
+        "type": "array",
+        "items": {
+          "pattern": "^[a-z][a-z0-9-]*$",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

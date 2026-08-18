@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "trackId",
+    "title",
+    "summary",
+    "order",
+    "durationMinutes",
+    "objectives",
+    "skillIds",
+    "checkpointQuestionIds",
+    "sourceIds",
+    "review"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1,
+      "type": "number"
+    },
+    "id": {
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "type": "string"
+    },
+    "trackId": {
+      "anyOf": [
+        {
+          "const": "beginner",
+          "type": "string"
+        },
+        {
+          "const": "skills",
+          "type": "string"
+        }
+      ]
+    },
+    "title": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "summary": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "order": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "durationMinutes": {
+      "minimum": 1,
+      "maximum": 60,
+      "type": "integer"
+    },
+    "objectives": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    "skillIds": {
+      "minItems": 1,
+      "uniqueItems": true,
+      "type": "array",
+      "items": {
+        "pattern": "^[a-z][a-z0-9-]*$",
+        "type": "string"
+      }
+    },
+    "checkpointQuestionIds": {
+      "minItems": 1,
+      "uniqueItems": true,
+      "type": "array",
+      "items": {
+        "pattern": "^[a-z][a-z0-9-]*$",
+        "type": "string"
+      }
+    },
+    "sourceIds": {
+      "minItems": 1,
+      "uniqueItems": true,
+      "type": "array",
+      "items": {
+        "pattern": "^[a-z][a-z0-9-]*$",
+        "type": "string"
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "anyOf": [
+            {
+              "const": "draft",
+              "type": "string"
+            },
+            {
+              "const": "approved",
+              "type": "string"
+            }
+          ]
+        },
+        "reviewer": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "reviewedAt": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

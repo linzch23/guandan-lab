@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "b04-straight-flush-compare",
+  "trackId": "beginner",
+  "difficulty": 2,
+  "prompt": "按本课程采用的国家竞技规则口径，哪组更大？",
+  "skillIds": [
+    "ranking"
+  ],
+  "lessonIds": [
+    "b04-bombs-special"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "同花顺高于五张同点数炸弹；遇到不同赛制仍应核对赛事规则。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "comparison",
+  "levelRank": "6",
+  "groups": [
+    {
+      "id": "five-bomb",
+      "label": "五张 9 炸弹",
+      "cards": [
+        "S-9",
+        "H-9",
+        "D-9",
+        "C-9",
+        "S-9"
+      ]
+    },
+    {
+      "id": "straight-flush",
+      "label": "同花顺",
+      "cards": [
+        "H-7",
+        "H-8",
+        "H-9",
+        "H-10",
+        "H-J"
+      ]
+    }
+  ],
+  "correctGroupId": "straight-flush"
+}

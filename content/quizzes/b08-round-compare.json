@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "b08-round-compare",
+  "trackId": "beginner",
+  "difficulty": 2,
+  "prompt": "当前打 6，哪手单牌更适合作为明确的高牌控制？",
+  "skillIds": [
+    "leveling"
+  ],
+  "lessonIds": [
+    "b08-round-and-leveling"
+  ],
+  "sourceIds": [
+    "national-rules"
+  ],
+  "explanation": "大王是最高单牌，适合作为示例中的明确控制牌。",
+  "review": {
+    "status": "draft"
+  },
+  "type": "comparison",
+  "levelRank": "6",
+  "groups": [
+    {
+      "id": "king",
+      "label": "K",
+      "cards": [
+        "S-K"
+      ]
+    },
+    {
+      "id": "joker",
+      "label": "大王",
+      "cards": [
+        "RJ"
+      ]
+    }
+  ],
+  "correctGroupId": "joker"
+}
