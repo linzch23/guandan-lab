@@ -58,8 +58,6 @@ content/
 └── schemas/     # 提交到仓库的 JSON Schema
 ```
 
-实现架构与需求基线分别见 [spec.md](spec.md)、[plan.md](plan.md)、[task.md](task.md) 和 [checklist.md](checklist.md)。贡献内容前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
-
 ## GitHub Pages
 
 仓库内工作流会在主分支依次运行 Schema 同步、内容校验、lint、类型检查、测试、构建与端到端测试，全部通过后上传 Pages 产物。

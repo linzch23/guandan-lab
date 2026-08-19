@@ -88,6 +88,48 @@ test("mobile lesson tools open and close directory drawers", async ({ page }) =>
   await expect(page.getByRole("dialog")).not.toBeVisible();
 });
 
+test("mobile lesson tools stay available while reading", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("#/learn/b01-introduction");
+  await expect(page.getByRole("heading", { name: "快速认识掼蛋" })).toBeVisible();
+
+  await page.evaluate(() => {
+    document.documentElement.style.scrollBehavior = "auto";
+    window.scrollTo(0, document.body.scrollHeight);
+  });
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(0);
+
+  const geometry = await page.evaluate(() => {
+    const toolbar = document.querySelector(".lesson-mobile-tools")!.getBoundingClientRect();
+    const topbar = document.querySelector(".topbar")!.getBoundingClientRect();
+    const mobileNav = document.querySelector(".mobile-nav")!.getBoundingClientRect();
+    return { toolbarTop: toolbar.top, toolbarBottom: toolbar.bottom, topbarBottom: topbar.bottom, mobileNavTop: mobileNav.top, overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth };
+  });
+  expect(geometry.toolbarTop).toBeGreaterThanOrEqual(geometry.topbarBottom - 1);
+  expect(geometry.toolbarTop).toBeLessThanOrEqual(geometry.topbarBottom + 1);
+  expect(geometry.toolbarBottom).toBeLessThanOrEqual(geometry.mobileNavTop);
+  expect(geometry.overflow).toBe(false);
+
+  await page.getByRole("button", { name: "课程目录" }).click();
+  await expect(page.getByRole("dialog", { name: "课程目录" })).toBeVisible();
+  await page.keyboard.press("Escape");
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
+  await page.getByRole("button", { name: "章节导航" }).click();
+  const chapterDialog = page.getByRole("dialog", { name: "章节导航" });
+  await expect(chapterDialog).toBeVisible();
+  await chapterDialog.getByRole("link", { name: "新手先建立三个习惯" }).click();
+  await expect(chapterDialog).not.toBeVisible();
+
+  const heading = page.getByRole("heading", { name: "新手先建立三个习惯" });
+  await expect.poll(() => page.evaluate(() => {
+    const target = [...document.querySelectorAll(".lesson-content h2")].find((element) => element.textContent?.trim() === "新手先建立三个习惯")?.getBoundingClientRect();
+    const toolbar = document.querySelector(".lesson-mobile-tools")?.getBoundingClientRect();
+    return target && toolbar ? target.top - toolbar.bottom : Number.NEGATIVE_INFINITY;
+  })).toBeGreaterThanOrEqual(-1);
+  await expect(heading).toBeVisible();
+});
+
 test("filtered training writes skill progress", async ({ page }) => {
   await page.goto("#/train?skillId=control");
   await expect(page.getByLabel("知识标签")).toHaveValue("control");
